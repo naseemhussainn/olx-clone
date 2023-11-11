@@ -39,11 +39,11 @@ function Header() {
     <div className="headerParentDiv">
       <div className="headerChildDiv">
         <div className="brandName">
-          <OlxLogo></OlxLogo>
+          <a href='/'><OlxLogo></OlxLogo></a>       
         </div>
         <div className="placeSearch">
           <Search></Search>
-          <input type="text" />
+          <input type="text" placeholder='India'/>
           <Arrow></Arrow>
         </div>
         <div className="productSearch">
@@ -81,14 +81,14 @@ function Header() {
                 left: popoverPosition.left + 'px',
               }}>
                 <button className="btn btn-secondary" onClick={handleSignout}>
-                  Sign Out
+                  logout
                 </button>
               </div>
             )}
           </span>
         )}
 
-        <div className="sellMenu">
+        <div className="sellMenu" onClick={()=>{navigate('/sell')}}>
           <SellButton></SellButton>
           <div className="sellMenuContent">
             <SellButtonPlus></SellButtonPlus>
